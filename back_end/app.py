@@ -15,7 +15,7 @@ def create_app():
     # --- JWT Setup ---
     jwt = JWTManager(app)
     app.config["JWT_TOKEN_LOCATION"] = ["cookies"]
-    app.config["JWT_COOKIE_DOMAIN"] = "tsmbackend-production.up.railway.app"  # ✅ share across all subdomains
+    app.config["JWT_COOKIE_DOMAIN"] = "midasrnd-production.up.railway.app"  # ✅ share across all subdomains
     app.config["JWT_COOKIE_SECURE"] = True  # ✅ always true in production
     app.config["JWT_COOKIE_SAMESITE"] = "None"  # ✅ required for cross-domain cookie
     app.config["JWT_COOKIE_CSRF_PROTECT"] = False
@@ -44,20 +44,20 @@ def create_app():
         allowed_origins = [
             "http://localhost:5173",
             "http://127.0.0.1:5173",
-            "https://www.thirdshiftmedia.agency",
-            "https://copt.thirdshiftmedia.agency",
-            "https://opt.thirdshiftmedia.agency",
-            "https://tmrp.thirdshiftmedia.agency",
-            "https://mo.thirdshiftmedia.agency",
-            "https://mmmr.thirdshiftmedia.agency",
-            "https://cts.thirdshiftmedia.agency",
-            "https://pbi.thirdshiftmedia.agency",
-            "https://pm.thirdshiftmedia.agency",
-            "https://fe.thirdshiftmedia.agency",
-            "https://bp.thirdshiftmedia.agency",
+            "https://www.midasmedialk.agency",
+            "https://copt.midasmedialk.agency",
+            "https://opt.midasmedialk.agency",
+            "https://tmrp.midasmedialk.agency",
+            "https://mo.midasmedialk.agency",
+            "https://mmmr.midasmedialk.agency",
+            "https://cts.midasmedialk.agency",
+            "https://pbi.midasmedialk.agency",
+            "https://pm.midasmedialk.agency",
+            "https://fe.midasmedialk.agency",
+            "https://bp.midasmedialk.agency",
         ]
         # ✅ Dynamically handle future subdomains
-        if origin and origin.endswith(".thirdshiftmedia.agency"):
+        if origin and origin.endswith(".midasmedialk.agency"):
             response.headers["Access-Control-Allow-Origin"] = origin
         elif origin in allowed_origins:
             response.headers["Access-Control-Allow-Origin"] = origin
