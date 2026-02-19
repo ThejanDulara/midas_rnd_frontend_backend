@@ -125,7 +125,7 @@ export default function SignIn() {
             />
             <h1 style={leftTitle}>Media Intelligence Platform</h1>
             <p style={leftText}>
-              Meet the Daredevils in the Media Scene Who Curate Hand Crafted Business Solutions By Harnessing the Power of Data Driven Local insights.
+              Where Power Meets Precision,The Dragons of Media Leadership Powering Data-Driven Business Growth.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function SignIn() {
               <div style={iconCircle}>🤖</div>
               <h2 style={formTitle}>Welcome Back</h2>
               <p style={formSubtitle}>
-                Sign in to your Third Shift Media account
+                Sign in to your Midas Media account
               </p>
             </div>
 

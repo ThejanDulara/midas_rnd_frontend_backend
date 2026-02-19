@@ -5,17 +5,17 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const tools = [
-  { name:'Communication Objective Prioritization Tool', url:'https://copt.thirdshiftmedia.agency/', icon:'🧠', description:'Data-driven prioritization engine for communication strategies' },
-  { name:'Campaign Touchpoint Scorer', url:'https://cts.thirdshiftmedia.agency/', icon:'📊', description:'Campaign Touchpoint Prioritization via Weighted Communication Task Scoring' },
-  { name:'Television Media Scheduling Optimization Tool', url:'https://opt.thirdshiftmedia.agency/', icon:'🤖', description:'Smart media spot allocator using mathematical optimization' },
-  { name:'Multimedia Reach Analyzer', url:'https://mmmr.thirdshiftmedia.agency/', icon:'📈', description:'ML & genetic algorithm-based optimization for media mix' },
-  { name:'Media Objective Identifier', url:'https://mo.thirdshiftmedia.agency/', icon:'🧮', description:'Filtering media objectives to streamline decision-making' },
-  { name:'Television Media Reach Predictor', url:'https://tmrp.thirdshiftmedia.agency/', icon:'📺', description:'ML-based TV reach prediction for smarter planning' },
-  { name:'Power BI Dashboards', url:'https://pbi.thirdshiftmedia.agency/', icon:'📊', description:'Centralized library of Power BI dashboards' },
-  { name:'Project Management tool', url:'https://pm.thirdshiftmedia.agency/', icon:'🗃️', description:'Manage all projects in one centralized workspace' },
-  { name:'Joseph W. Ostrow – Frequency Estimator ', url:'https://fe.thirdshiftmedia.agency/', icon:'📐️', description:'Frequency planning tool based on the Ostrow model for effective reach optimization' },
-  { name:'SOV/SOM Based Budget Planning tool', url:'https://bp.thirdshiftmedia.agency/', icon:'🎯', description:'Manage all projects in one centralized workspace' },
-  { name:'Coming Soon', url:'https://www.thirdshiftmedia.agency/dashboard', icon:'✨', description:'Strategic budget allocation using Share of Voice and Share of Market principles' },
+  { name:'Communication Objective Prioritization Tool', url:'https://copt.midasmedialk.agency/', icon:'🧠', description:'Data-driven prioritization engine for communication strategies' },
+  { name:'Campaign Touchpoint Scorer', url:'https://cts.midasmedialk.agency/', icon:'📊', description:'Campaign Touchpoint Prioritization via Weighted Communication Task Scoring' },
+  { name:'Television Media Scheduling Optimization Tool', url:'https://opt.midasmedialk.agency/', icon:'🤖', description:'Smart media spot allocator using mathematical optimization' },
+  { name:'Multimedia Reach Analyzer', url:'https://mmmr.midasmedialk.agency/', icon:'📈', description:'ML & genetic algorithm-based optimization for media mix' },
+  { name:'Media Objective Identifier', url:'https://mo.midasmedialk.agency/', icon:'🧮', description:'Filtering media objectives to streamline decision-making' },
+  { name:'Television Media Reach Predictor', url:'https://tmrp.midasmedialk.agency/', icon:'📺', description:'ML-based TV reach prediction for smarter planning' },
+  { name:'Power BI Dashboards', url:'https://pbi.midasmedialk.agency/', icon:'📊', description:'Centralized library of Power BI dashboards' },
+  { name:'Project Management tool', url:'https://pm.midasmedialk.agency/', icon:'🗃️', description:'Manage all projects in one centralized workspace' },
+  { name:'Joseph W. Ostrow – Frequency Estimator ', url:'https://fe.midasmedialk.agency/', icon:'📐️', description:'Frequency planning tool based on the Ostrow model for effective reach optimization' },
+  { name:'SOV/SOM Based Budget Planning tool', url:'https://bp.midasmedialk.agency/', icon:'🎯', description:'Manage all projects in one centralized workspace' },
+  { name:'Coming Soon', url:'https://www.midasmedialk.agency/dashboard', icon:'✨', description:'Strategic budget allocation using Share of Voice and Share of Market principles' },
 ];
 
 export default function Dashboard() {
@@ -41,7 +41,7 @@ export default function Dashboard() {
           <div style={styles.heroIcon}>🤖</div>
           <h1 style={styles.heroTitle}>
             Welcome{user ? `, ${user.first_name}` : ""} to the{" "}
-            <span style={{ color: "#3bb9af" }}>Third Shift AI Research Hub</span>
+            <span style={{ color: "#3bb9af" }}>Midas Media AI Research Hub</span>
           </h1>
           <p style={styles.heroText}>
             Smart media decisions powered by <strong>AI</strong> and{" "}
