@@ -110,7 +110,7 @@ export default function SignIn() {
   return (
     <>
       {/* === Full-page layout === */}
-      <section style={pageWrapper}>
+      <section style={pageWrapper} className="auth-page-wrapper">
         {/* Left gradient panel */}
         <div style={leftPanel}>
           <div style={leftInner}>
@@ -118,14 +118,17 @@ export default function SignIn() {
               src="/TS-GARA-Mask.png"
               alt="TS GARA Mask"
               style={{
-                height: 400,
-                marginBottom: 30,
+                display: "block",
+                margin: "0 auto clamp(15px, 3vw, 30px) auto",
+                height: "auto",
+                maxHeight: "35vh",
+                maxWidth: "80%",
                 filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.2))",
               }}
             />
             <h1 style={leftTitle}>Media Intelligence Platform</h1>
             <p style={leftText}>
-              Where Power Meets Precision,The Dragons of Media Leadership Powering Data-Driven Business Growth.
+              Where Power Meets Precision, The Dragons of Media Leadership Powering Data-Driven Business Growth.
             </p>
           </div>
         </div>
@@ -182,7 +185,7 @@ export default function SignIn() {
                     style={{
                       width: 16,
                       height: 16,
-                      accentColor: "#3bb9af", // ✅ brand green color
+                      accentColor: "#8b7c56", // ✅ brand green color
                       cursor: "pointer",
                     }}
                     disabled={isSigningIn}
@@ -213,7 +216,7 @@ export default function SignIn() {
 
               <div style={divider}></div>
 
-              <p style={{ textAlign: "center", fontSize: 14, color: "#4a5568" }}>
+              <p style={{ textAlign: "center", fontSize: 14, color: "#8d8e92" }}>
                 New to our platform?
               </p>
               <Link
@@ -234,13 +237,13 @@ export default function SignIn() {
         {forgotOpen && (
           <div style={modalBackdrop} onClick={() => !isSendingOtp && !isResettingPassword && setForgotOpen(false)}>
             <div style={modalBox} onClick={(e) => e.stopPropagation()}>
-              <h3 style={{ marginTop: 0, color: "#1a202c", textAlign: "center" }}>
+              <h3 style={{ marginTop: 0, color: "#1e1e25", textAlign: "center" }}>
                 Reset Password
               </h3>
               <p
                 style={{
                   fontSize: 14,
-                  color: "#4a5568",
+                  color: "#8d8e92",
                   textAlign: "center",
                   marginBottom: 20,
                 }}
@@ -348,21 +351,21 @@ const pageWrapper = {
 /* Left gradient */
 const leftPanel = {
   flex: 1,
-  background: "linear-gradient(135deg, #3bb9af 0%, #b3dc39 100%)",
+  background: "linear-gradient(135deg, #8b7c56 0%, #1e1e25 100%)",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   color: "#fff",
   padding: "60px 40px",
 };
-const leftInner = { textAlign: "center", maxWidth: 500 };
+const leftInner = { textAlign: "center", maxWidth: 500, width: "100%", padding: "0 10px", boxSizing: "border-box" };
 const leftTitle = { fontSize: 32, fontWeight: 700, marginBottom: 16 };
-const leftText = { fontSize: 18, lineHeight: 1.6, color: "#000000" };
+const leftText = { fontSize: 18, lineHeight: 1.6, color: "#f2f5f7", textAlign: "center", margin: "0 auto" };
 
 /* Right side */
 const rightPanel = {
   flex: 1,
-  background: "#f8fafc",
+  background: "#f2f5f7",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -376,14 +379,14 @@ const formBox = {
   boxShadow: "0 4px 25px rgba(0,0,0,0.06)",
   width: "100%",
   maxWidth: 400,
-  border: "1px solid #e2e8f0",
+  border: "1px solid #8d8e92",
 };
 
 const iconCircle = {
   width: 60,
   height: 60,
   borderRadius: "50%",
-  backgroundColor: "#76cec7",
+  backgroundColor: "#a3956f",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -394,18 +397,18 @@ const iconCircle = {
 const formTitle = {
   fontSize: 24,
   fontWeight: 700,
-  color: "#2d3748",
+  color: "#1e1e25",
   marginBottom: 4,
 };
 const formSubtitle = {
-  color: "#4a5568",
+  color: "#8d8e92",
   fontSize: 14,
   margin: 0,
 };
 
 const labelStyle = {
   fontSize: 14,
-  color: "#374151",
+  color: "#8d8e92",
   fontWeight: 500,
   marginBottom: 4,
   display: "block",
@@ -413,7 +416,7 @@ const labelStyle = {
 
 const inputStyle = {
   padding: "12px 14px",
-  border: "1px solid #d1d5db",
+  border: "1px solid #8d8e92",
   borderRadius: 8,
   fontSize: 15,
   width: "100%",
@@ -424,13 +427,13 @@ const inputStyle = {
 const forgotLink = {
   background: "none",
   border: "none",
-  color: "#3bb9af",
+  color: "#8b7c56",
   cursor: "pointer",
   fontWeight: 500,
 };
 
 const primaryBtn = {
-  backgroundColor: "#3bb9af",
+  backgroundColor: "#8b7c56",
   color: "#fff",
   padding: "12px",
   border: "none",
@@ -442,8 +445,8 @@ const primaryBtn = {
 };
 const secondaryBtn = {
   background: "#fff",
-  border: "1px solid #cbd5e1",
-  color: "#3bb9af",
+  border: "1px solid #8d8e92",
+  color: "#8b7c56",
   padding: "12px",
   borderRadius: 8,
   textAlign: "center",
@@ -479,7 +482,7 @@ const modalBox = {
 const textBtnStyle = {
   background: "none",
   border: "none",
-  color: "#4a5568",
+  color: "#8d8e92",
   cursor: "pointer",
   fontSize: 14,
   padding: "8px",
@@ -490,7 +493,7 @@ const checkboxLabel = {
   alignItems: "center",
   gap: 6,
   fontSize: 14,
-  color: "#2d3748", // darker gray for better visibility
+  color: "#1e1e25", // darker gray for better visibility
   cursor: "pointer",
 };
 

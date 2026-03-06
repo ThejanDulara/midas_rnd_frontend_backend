@@ -103,7 +103,7 @@ export default function Profile() {
 
   return (
     <>
-      <section style={pageWrapper}>
+      <section style={pageWrapper} className="auth-page-wrapper">
         {/* Left gradient panel */}
         <div style={leftPanel}>
           <div style={leftInner}>
@@ -111,8 +111,11 @@ export default function Profile() {
               src="/TS-GARA-Mask.png"
               alt="TS GARA Mask"
               style={{
-                height: 400,
-                marginBottom: 30,
+                display: "block",
+                margin: "0 auto clamp(15px, 3vw, 30px) auto",
+                height: "auto",
+                maxHeight: "35vh",
+                maxWidth: "80%",
                 filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.2))",
               }}
             />
@@ -128,15 +131,15 @@ export default function Profile() {
         <div style={rightPanel}>
           <div style={formBox}>
             <div style={{ textAlign: "center", marginBottom: 24 }}>
-                {user.profile_pic ? (
-                  <img
-                    src={`${import.meta.env.VITE_API_BASE_URL || "https://midasrndfrontendbackend-production.up.railway.app"}${user.profile_pic}`}
-                    alt="Profile"
-                    style={headerImg}
-                  />
-                ) : (
-                  <div style={iconCircle}>👤</div>
-                )}
+              {user.profile_pic ? (
+                <img
+                  src={`${import.meta.env.VITE_API_BASE_URL || "https://midasrndfrontendbackend-production.up.railway.app"}${user.profile_pic}`}
+                  alt="Profile"
+                  style={headerImg}
+                />
+              ) : (
+                <div style={iconCircle}>👤</div>
+              )}
               <h2 style={formTitle}>
                 {user.first_name} {user.last_name}
               </h2>
@@ -184,10 +187,9 @@ export default function Profile() {
               </button>
             </div>
 
-            {/* Profile Picture */}
             <div style={{ marginTop: 32 }}>
               <h3 style={sectionTitle}>Profile Picture</h3>
-              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
                 {preview ? (
                   <img
                     src={preview}
@@ -197,7 +199,7 @@ export default function Profile() {
                       height: 64,
                       borderRadius: "50%",
                       objectFit: "cover",
-                      border: "2px solid #e2e8f0",
+                      border: "2px solid #8d8e92",
                     }}
                   />
                 ) : (
@@ -206,12 +208,12 @@ export default function Profile() {
                       width: 64,
                       height: 64,
                       borderRadius: "50%",
-                      backgroundColor: "#f7fafc",
-                      border: "2px dashed #e2e8f0",
+                      backgroundColor: "#f2f5f7",
+                      border: "2px dashed #8d8e92",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "#718096",
+                      color: "#8d8e92",
                       fontSize: 12,
                     }}
                   >
@@ -223,11 +225,11 @@ export default function Profile() {
                   <label
                     htmlFor="profileUpload"
                     style={{
-                      backgroundColor: "#f9fafc",
-                      border: "1px solid #d1d5db",
+                      backgroundColor: "#f2f5f7",
+                      border: "1px solid #8d8e92",
                       borderRadius: 8,
                       padding: "8px 12px",
-                      color: "#000",
+                      color: "#1e1e25",
                       cursor: "pointer",
                       fontSize: 14,
                       fontWeight: 500,
@@ -244,7 +246,7 @@ export default function Profile() {
                   />
                   <span
                     style={{
-                      color: "#000",
+                      color: "#1e1e25",
                       fontSize: 13,
                       maxWidth: 120,
                       overflow: "hidden",
@@ -313,20 +315,20 @@ const pageWrapper = {
 
 const leftPanel = {
   flex: 1,
-  background: "linear-gradient(135deg, #3bb9af 0%, #b3dc39 100%)",
+  background: "linear-gradient(135deg, #8b7c56 0%, #1e1e25 100%)",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   color: "#fff",
   padding: "60px 40px",
 };
-const leftInner = { textAlign: "center", maxWidth: 500 };
+const leftInner = { textAlign: "center", maxWidth: 500, width: "100%", padding: "0 10px", boxSizing: "border-box" };
 const leftTitle = { fontSize: 32, fontWeight: 700, marginBottom: 16 };
-const leftText = { fontSize: 18, lineHeight: 1.6, color: "#000" };
+const leftText = { fontSize: 18, lineHeight: 1.6, color: "#f2f5f7", textAlign: "center", margin: "0 auto" };
 
 const rightPanel = {
   flex: 1,
-  background: "#f8fafc",
+  background: "#f2f5f7",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -340,7 +342,7 @@ const formBox = {
   boxShadow: "0 4px 25px rgba(0,0,0,0.06)",
   width: "100%",
   maxWidth: 480,
-  border: "1px solid #e2e8f0",
+  border: "1px solid #8d8e92",
   height: "fit-content",       // ✅ Let content decide height
   maxHeight: "120vh",           // ✅ Increase visible space
   overflowY: "auto",           // ✅ Allow gentle scroll only if necessary
@@ -352,7 +354,7 @@ const iconCircle = {
   width: 70,
   height: 70,
   borderRadius: "50%",
-  backgroundColor: "#76cec7",
+  backgroundColor: "#a3956f",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -365,21 +367,21 @@ const headerImg = {
   height: 80,
   borderRadius: "50%",
   objectFit: "cover",
-  border: "2px solid #3bb9af",
+  border: "2px solid #8b7c56",
   marginBottom: 12,
 };
 
 const formTitle = {
   fontSize: 22,
   fontWeight: 700,
-  color: "#2d3748",
+  color: "#1e1e25",
   marginBottom: 4,
 };
-const formSubtitle = { color: "#4a5568", fontSize: 14, margin: 0 };
+const formSubtitle = { color: "#8d8e92", fontSize: 14, margin: 0 };
 
 const inputStyle = {
   padding: "12px 14px",
-  border: "1px solid #d1d5db",
+  border: "1px solid #8d8e92",
   borderRadius: 8,
   fontSize: 15,
   width: "100%",
@@ -388,7 +390,7 @@ const inputStyle = {
 };
 
 const primaryBtn = {
-  backgroundColor: "#3bb9af",
+  backgroundColor: "#8b7c56",
   color: "#fff",
   padding: "12px",
   border: "none",
@@ -400,8 +402,8 @@ const primaryBtn = {
 };
 
 const secondaryBtn = {
-  backgroundColor: "#b3dc39",
-  color: "#000",
+  backgroundColor: "#1e1e25",
+  color: "#fff",
   padding: "10px 14px",
   border: "none",
   borderRadius: 8,
@@ -413,6 +415,6 @@ const secondaryBtn = {
 const sectionTitle = {
   fontSize: 16,
   fontWeight: 600,
-  color: "#3bb9af",
+  color: "#8b7c56",
   marginBottom: 8,
 };

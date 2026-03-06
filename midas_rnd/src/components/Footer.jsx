@@ -15,9 +15,9 @@ const styles = {
     padding: '12px',
     textAlign: 'center',
     fontSize: '14px',
-    color: '#718096',
-    borderTop: '1px solid #e2e8f0',
-    backgroundColor: '#f9fafc'
+    color: '#8d8e92',
+    borderTop: '1px solid #8d8e92',
+    backgroundColor: '#f2f5f7'
   }
 };
 

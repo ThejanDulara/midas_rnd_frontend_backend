@@ -92,12 +92,12 @@ function Header() {
 
 const styles = {
   header: {
-    backgroundColor: '#f7fafc',
+    backgroundColor: '#f2f5f7',
     padding: '12px 24px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderBottom: '1px solid #e2e8f0',
+    borderBottom: '1px solid #8d8e92',
     position: 'relative',
     minHeight: '60px',
   },
@@ -123,7 +123,7 @@ const styles = {
     alignItems: 'center',
     gap: '16px',
     fontSize: '14px',
-    color: '#4a5568',
+    color: '#8d8e92',
     minWidth: 0, // Allow content to shrink if needed
   },
   userSection: {
@@ -140,27 +140,27 @@ const styles = {
   title: {
     fontSize: '20px',
     fontWeight: '600',
-    color: '#2d3748',
+    color: '#1e1e25',
     margin: 0,
     whiteSpace: 'nowrap'
   },
   tagline: {
     fontSize: '14px',
-    color: '#4a5568',
+    color: '#8d8e92',
     fontStyle: 'italic',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis'
   },
   environment: {
-    backgroundColor: '#edf2f7',
+    backgroundColor: '#f2f5f7',
     padding: '6px 12px',
     borderRadius: '20px',
     fontWeight: '500',
     whiteSpace: 'nowrap'
   },
   signinBtn: {
-    background: '#3bb9af',
+    background: '#8b7c56',
     color: '#fff',
     padding: '8px 14px',
     borderRadius: 8,
@@ -173,7 +173,7 @@ const styles = {
     borderRadius: '50%',
     overflow: 'hidden',
     cursor: 'pointer',
-    border: '1px solid #e2e8f0',
+    border: '1px solid #8d8e92',
     flexShrink: 0
   },
   avatarImg: {
@@ -187,8 +187,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#e9d8fd',
-    color: '#4c1d95',
+    background: '#f2f5f7',
+    color: '#8b7c56',
     fontWeight: 700
   },
   menu: {
@@ -196,7 +196,7 @@ const styles = {
     top: '100%',
     right: 0,
     background: '#fff',
-    border: '1px solid #e2e8f0',
+    border: '1px solid #8d8e92',
     borderRadius: 8,
     minWidth: 160,
     boxShadow: '0 10px 30px rgba(0,0,0,.08)',
@@ -212,12 +212,12 @@ const styles = {
       border: "none",
       cursor: "pointer",
       fontSize: "14px",
-      color: "#2d3748",
+      color: "#1e1e25",
       lineHeight: "1.2",
     },
     menuDivider: {
       height: 1,
-      backgroundColor: "#e2e8f0",
+      backgroundColor: "#8d8e92",
       margin: "4px 0",
     }
 };

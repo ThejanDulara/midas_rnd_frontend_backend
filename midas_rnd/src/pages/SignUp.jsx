@@ -95,7 +95,7 @@ export default function SignUp() {
 
   return (
     <>
-      <section style={pageWrapper}>
+      <section style={pageWrapper} className="auth-page-wrapper">
         {/* Left gradient panel */}
         <div style={leftPanel}>
           <div style={leftInner}>
@@ -103,8 +103,11 @@ export default function SignUp() {
               src="/TS-GARA-Mask.png"
               alt="TS GARA Mask"
               style={{
-                height: 400,
-                marginBottom: 30,
+                display: "block",
+                margin: "0 auto clamp(15px, 3vw, 30px) auto",
+                height: "auto",
+                maxHeight: "35vh",
+                maxWidth: "80%",
                 filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.2))",
               }}
             />
@@ -230,7 +233,7 @@ export default function SignUp() {
               <div style={{ display: "grid", gap: 8 }}>
                 <label style={{
                   fontSize: 14,
-                  color: "#4a5568",
+                  color: "#8d8e92",
                   fontWeight: 500,
                   opacity: isSubmitting ? 0.7 : 1
                 }}>
@@ -246,7 +249,7 @@ export default function SignUp() {
                         height: 56,
                         borderRadius: "50%",
                         objectFit: "cover",
-                        border: "2px solid #e2e8f0",
+                        border: "2px solid #8d8e92",
                         opacity: isSubmitting ? 0.7 : 1,
                       }}
                     />
@@ -256,12 +259,12 @@ export default function SignUp() {
                         width: 56,
                         height: 56,
                         borderRadius: "50%",
-                        backgroundColor: "#f7fafc",
-                        border: "2px dashed #e2e8f0",
+                        backgroundColor: "#f2f5f7",
+                        border: "2px dashed #8d8e92",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "#718096",
+                        color: "#8d8e92",
                         fontSize: 12,
                         opacity: isSubmitting ? 0.7 : 1,
                       }}
@@ -274,11 +277,11 @@ export default function SignUp() {
                     <label
                       htmlFor="profileUpload"
                       style={{
-                        backgroundColor: "#f9fafc",
-                        border: "1px solid #d1d5db",
+                        backgroundColor: "#f2f5f7",
+                        border: "1px solid #8d8e92",
                         borderRadius: 8,
                         padding: "8px 12px",
-                        color: "#000",
+                        color: "#1e1e25",
                         cursor: isSubmitting ? "not-allowed" : "pointer",
                         fontSize: 14,
                         fontWeight: 500,
@@ -296,7 +299,7 @@ export default function SignUp() {
                       disabled={isSubmitting}
                     />
                     <span style={{
-                      color: "#000",
+                      color: "#1e1e25",
                       fontSize: 13,
                       opacity: isSubmitting ? 0.7 : 1
                     }}>
@@ -324,7 +327,7 @@ export default function SignUp() {
                 marginTop: 20,
                 textAlign: "center",
                 fontSize: 14,
-                color: "#718096",
+                color: "#8d8e92",
                 opacity: isSubmitting ? 0.7 : 1,
               }}
             >
@@ -332,7 +335,7 @@ export default function SignUp() {
               <Link
                 to="/signin"
                 style={{
-                  color: "#3bb9af",
+                  color: "#8b7c56",
                   textDecoration: "none",
                   fontWeight: 500,
                   pointerEvents: isSubmitting ? "none" : "auto",
@@ -356,12 +359,13 @@ const pageWrapper = {
   flexWrap: "wrap",
   background: "#fff",
   position: "relative",
-  overflow: "hidden",
+  overflowY: "auto",
+  overflowX: "hidden",
 };
 
 const leftPanel = {
   flex: 1,
-  background: "linear-gradient(135deg, #3bb9af 0%, #b3dc39 100%)",
+  background: "linear-gradient(135deg, #8b7c56 0%, #1e1e25 100%)",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -369,13 +373,13 @@ const leftPanel = {
   padding: "60px 40px",
 };
 
-const leftInner = { textAlign: "center", maxWidth: 500 };
+const leftInner = { textAlign: "center", maxWidth: 500, width: "100%", padding: "0 10px", boxSizing: "border-box" };
 const leftTitle = { fontSize: 32, fontWeight: 700, marginBottom: 16 };
-const leftText = { fontSize: 18, lineHeight: 1.6, color: "#000" };
+const leftText = { fontSize: 18, lineHeight: 1.6, color: "#f2f5f7", textAlign: "center", margin: "0 auto" };
 
 const rightPanel = {
   flex: 1,
-  background: "#f8fafc",
+  background: "#f2f5f7",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -389,14 +393,14 @@ const formBox = {
   boxShadow: "0 4px 25px rgba(0,0,0,0.06)",
   width: "100%",
   maxWidth: 460,
-  border: "1px solid #e2e8f0",
+  border: "1px solid #8d8e92",
 };
 
 const iconCircle = {
   width: 60,
   height: 60,
   borderRadius: "50%",
-  backgroundColor: "#76cec7",
+  backgroundColor: "#a3956f",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -407,18 +411,18 @@ const iconCircle = {
 const formTitle = {
   fontSize: 24,
   fontWeight: 700,
-  color: "#2d3748",
+  color: "#1e1e25",
   marginBottom: 4,
 };
 const formSubtitle = {
-  color: "#4a5568",
+  color: "#8d8e92",
   fontSize: 14,
   margin: 0,
 };
 
 const inputStyle = {
   padding: "12px 14px",
-  border: "1px solid #d1d5db",
+  border: "1px solid #8d8e92",
   borderRadius: 8,
   fontSize: 15,
   width: "100%",
@@ -427,7 +431,7 @@ const inputStyle = {
 };
 
 const primaryBtn = {
-  backgroundColor: "#3bb9af",
+  backgroundColor: "#8b7c56",
   color: "#fff",
   padding: "12px",
   border: "none",

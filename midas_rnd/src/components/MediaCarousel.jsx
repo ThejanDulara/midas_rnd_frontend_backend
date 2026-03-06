@@ -119,7 +119,7 @@ function MediaCarousel({ media, imageIntervalMs = 1000 }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #000;
+          background: #1e1e25;
         }
         .slide {
           position: absolute;
@@ -133,7 +133,7 @@ function MediaCarousel({ media, imageIntervalMs = 1000 }) {
         .slide.active { opacity: 1; }
         .slide-media { width: 100%; height: 100%; object-position: center center; }
         .slide-media.video { object-fit: cover; }
-        .slide-media.image { object-fit: contain; background: #000; }
+        .slide-media.image { object-fit: contain; background: #1e1e25; }
         .controls {
           position: absolute; bottom: 10px; left: 0; right: 0;
           display: flex; justify-content: center; align-items: center; gap: 10px; z-index: 2;

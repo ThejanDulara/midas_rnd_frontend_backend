@@ -228,7 +228,7 @@ export default function Admin() {
 const pageWrapper = {
   width: "100%",
   minHeight: "100vh",
-  backgroundColor: "#f8fafc",
+  backgroundColor: "#f2f5f7",
   padding: "40px 0",
   display: "flex",
   justifyContent: "center",
@@ -245,7 +245,7 @@ const container = {
 const pageTitle = {
   fontSize: 28,
   fontWeight: 700,
-  color: "#2d3748",
+  color: "#1e1e25",
   marginBottom: 32,
   textAlign: "center",
 };
@@ -256,13 +256,13 @@ const card = {
   boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
   padding: "24px",
   marginBottom: 40,
-  border: "1px solid #edf2f7",
+  border: "1px solid #f2f5f7",
 };
 
 const sectionTitle = {
   fontSize: 20,
   fontWeight: 600,
-  color: "#3bb9af",
+  color: "#8b7c56",
   marginBottom: 16,
 };
 
@@ -278,17 +278,17 @@ const table = {
 const th = {
   textAlign: "left",
   padding: "12px",
-  borderBottom: "2px solid #e2e8f0",
+  borderBottom: "2px solid #8d8e92",
   fontSize: 14,
-  color: "#4a5568",
-  backgroundColor: "#f9fafc",
+  color: "#8d8e92",
+  backgroundColor: "#f2f5f7",
 };
 
 const td = {
   padding: "12px",
-  borderBottom: "1px solid #edf2f7",
+  borderBottom: "1px solid #f2f5f7",
   fontSize: 14,
-  color: "#2d3748",
+  color: "#1e1e25",
   verticalAlign: "middle",
 };
 
@@ -297,18 +297,18 @@ const profilePic = {
   height: 48,
   borderRadius: "50%",
   objectFit: "cover",
-  border: "1px solid #e2e8f0",
+  border: "1px solid #8d8e92",
 };
 
 const emptyText = {
-  color: "#718096",
+  color: "#8d8e92",
   fontStyle: "italic",
   textAlign: "center",
   padding: "16px 0",
 };
 
 const btnApprove = {
-  backgroundColor: "#3bb9af",
+  backgroundColor: "#8b7c56",
   color: "#fff",
   border: "none",
   padding: "6px 12px",
@@ -320,8 +320,8 @@ const btnApprove = {
 };
 
 const btnReject = {
-  backgroundColor: "#b3dc39",
-  color: "#000",
+  backgroundColor: "#1e1e25",
+  color: "#1e1e25",
   border: "none",
   padding: "6px 12px",
   borderRadius: 6,
