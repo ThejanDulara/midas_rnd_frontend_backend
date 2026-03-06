@@ -37,7 +37,7 @@ export default function Dashboard() {
 
       {/* Header Section */}
       <section style={styles.heroSection}>
-        <div style={styles.heroInner}>
+        <div style={styles.heroInner} className="hero-inner-container">
           <div style={styles.heroIcon}>🤖</div>
           <h1 style={styles.heroTitle}>
             Welcome{user ? `, ${user.first_name}` : ""} to the{" "}
@@ -53,7 +53,7 @@ export default function Dashboard() {
       {/* Tools Section */}
       <section style={styles.toolsSection}>
         <h2 style={styles.sectionTitle}>Explore Our Tools</h2>
-        <div style={styles.cardGrid}>
+        <div style={styles.cardGrid} className="card-grid">
           {tools.map((tool, i) => (
             <a
               key={i}
@@ -111,6 +111,7 @@ const styles = {
     background: "linear-gradient(135deg, #f2f5f7 0%, #f2f5f7 100%)",
     minHeight: "100vh",
     padding: "40px 20px",
+    boxSizing: "border-box",
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
@@ -125,6 +126,8 @@ const styles = {
     boxShadow: "0 8px 30px rgba(0,0,0,0.08)",
     padding: "40px 30px",
     maxWidth: 900,
+    width: "100%",
+    boxSizing: "border-box",
     margin: "0 auto",
     border: "1px solid #f2f5f7",
   },
@@ -156,8 +159,10 @@ const styles = {
   },
   cardGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
     gap: 24,
+    width: "100%",
+    boxSizing: "border-box",
     justifyItems: "center",
   },
   toolCard: {
@@ -168,6 +173,7 @@ const styles = {
     padding: "24px 20px",
     width: "100%",
     maxWidth: 360,
+    boxSizing: "border-box",
     transition: "all 0.3s ease",
     display: "flex",
     alignItems: "center",
